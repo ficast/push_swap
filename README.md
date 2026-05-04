@@ -51,5 +51,6 @@ The algorithm selection will be documented here with a detailed explanation and 
 - [Sorting Algorithms — Wikipedia](https://en.wikipedia.org/wiki/Sorting_algorithm)
 - [Radix Sort explanation](https://www.geeksforgeeks.org/radix-sort/)
 - [Turk Algorithm explanation](https://medium.com/@ayogun/push-swap-c1f5d2d41e97)
+- [Push_swap Tutorial! (YouTube)](https://www.youtube.com/watch?v=wRvipSG4Mmk&t=797s)
 
 **AI usage:** Claude (claude.ai/claude-code) was used to generate the initial project skeleton — file structure, Makefile, header with type definitions, and empty function stubs. The algorithm design and implementation are done manually.
