@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fiolivei <fiolivei@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: ipinto-m <ipinto-m@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/04 00:00:00 by fiolivei          #+#    #+#             */
-/*   Updated: 2026/05/04 00:00:00 by fiolivei         ###   ########.fr       */
+/*   Updated: 2026/05/07 22:58:39 by ipinto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../../push_swap.h"
 
 //sort_a (O(n²)) → insertion? selection? bubble? min/max extraction?
 static void	sort_a(t_stacks *s)
@@ -23,6 +23,7 @@ static void	sort_b(t_stacks *s)
 {
 	(void)s;
 }
+
 //  (O(n log n)) → radix LSD? quicksort com partição? Turkish?
 static void	sort_c(t_stacks *s)
 {

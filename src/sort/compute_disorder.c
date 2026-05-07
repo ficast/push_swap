@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   disorder_metric.c                                  :+:      :+:    :+:   */
+/*   compute_disorder.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fiolivei <fiolivei@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: ipinto-m <ipinto-m@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/04 00:00:00 by fiolivei          #+#    #+#             */
-/*   Updated: 2026/05/04 00:00:00 by fiolivei         ###   ########.fr       */
+/*   Updated: 2026/05/07 22:16:11 by ipinto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../../push_swap.h"
 
 double	compute_disorder(t_node *stack)
 {
