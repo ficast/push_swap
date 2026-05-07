@@ -2,6 +2,12 @@ NAME	= push_swap
 CC		= cc
 CFLAGS	= -Wall -Wextra -Werror
 
+RM          = rm -f
+AR          = ar rcs
+
+LIBFT_DIR   = ./libft
+LIBFT       = $(LIBFT_DIR)/libft.a
+
 SRCS	= src/main.c \
 		  src/stack_utils.c \
 		  src/input.c \
@@ -16,14 +22,21 @@ OBJS	= $(SRCS:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+$(LIBFT):
+	@$(MAKE) -C $(LIBFT_DIR)
+
+$(NAME): $(LIBFT) $(OBJS)
+	cp $(LIBFT) $(NAME)
+	$(AR) $(NAME) $(OBJS)
+
 
 clean:
-	rm -f $(OBJS)
+	@$(MAKE) clean -C $(LIBFT_DIR)
+	$(RM) $(OBJS)
 
 fclean: clean
-	rm -f $(NAME)
+	@$(MAKE) fclean -C $(LIBFT_DIR)
+	$(RM) $(NAME)
 
 re: fclean all
 
