@@ -9,7 +9,8 @@ SRCS	= src/main.c \
 		  src/ops/swap.c \
 		  src/ops/push.c \
 		  src/ops/rotate.c \
-		  src/ops/reverse_rotate.c
+		  src/ops/reverse_rotate.c \
+		  src/compute_disorder.c
 
 OBJS	= $(SRCS:.c=.o)
 

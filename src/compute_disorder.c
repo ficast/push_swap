@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   input.c                                            :+:      :+:    :+:   */
+/*   disorder_metric.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fiolivei <fiolivei@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,10 +12,29 @@
 
 #include "../push_swap.h"
 
-t_node	*parse_args(int argc, char **argv)
+double	compute_disorder(t_node *stack)
 {
-	//check if flags are valid
-	(void)argc;
-	(void)argv;
-	return (NULL);
+	int		mistakes;
+	int		total_pairs;
+	t_node	*a;
+	t_node	*b;
+
+	mistakes = 0;
+	total_pairs = 0;
+	a = stack;
+	while (a)
+	{
+		b = a->next;
+		while (b)
+		{
+			total_pairs++;
+			if (a->value > b->value)
+				mistakes++;
+			b = b->next;
+		}
+		a = a->next;
+	}
+	if (total_pairs == 0)
+		return (0.0);
+	return ((double)mistakes / total_pairs);
 }
