@@ -29,8 +29,6 @@ typedef struct s_stacks
 }				t_stacks;
 
 /* stack utils */
-void	push_front(t_node **stack, int value);
-int		pop_front(t_node **stack);
 int		peek(t_node *stack);
 int		stack_size(t_node *stack);
 int		is_sorted(t_node *stack);
