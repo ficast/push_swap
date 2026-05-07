@@ -14,6 +14,7 @@
 
 t_node	*parse_args(int argc, char **argv)
 {
+	//check if flags are valid
 	(void)argc;
 	(void)argv;
 	return (NULL);

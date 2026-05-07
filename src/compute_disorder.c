@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack_utils.c                                      :+:      :+:    :+:   */
+/*   disorder_metric.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fiolivei <fiolivei@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,44 +12,29 @@
 
 #include "../push_swap.h"
 
-void	push_front(t_node **stack, int value)
+double	compute_disorder(t_node *stack)
 {
-	(void)stack;
-	(void)value;
-}
+	int		mistakes;
+	int		total_pairs;
+	t_node	*a;
+	t_node	*b;
 
-int	pop_front(t_node **stack)
-{
-	(void)stack;
-	return (0);
-}
-
-int	peek(t_node *stack)
-{
-	(void)stack;
-	return (0);
-}
-
-int	stack_size(t_node *stack)
-{
-	int	size;
-
-	size = 0;
-	while (stack)
+	mistakes = 0;
+	total_pairs = 0;
+	a = stack;
+	while (a)
 	{
-		size++;
-		stack = stack->next;
+		b = a->next;
+		while (b)
+		{
+			total_pairs++;
+			if (a->value > b->value)
+				mistakes++;
+			b = b->next;
+		}
+		a = a->next;
 	}
-	return (size);
-}
-
-int	is_sorted(t_node *stack)
-{
-	(void)stack;
-	return (1);
-}
-
-void	free_stack(t_node **stack)
-{
-	(void)stack;
+	if (total_pairs == 0)
+		return (0.0);
+	return ((double)mistakes / total_pairs);
 }

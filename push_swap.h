@@ -50,7 +50,8 @@ void	op_rrb(t_stacks *s);
 void	op_rrr(t_stacks *s);
 
 /* sort */
-void	sort(t_stacks *s);
+double		compute_disorder(t_node *stack);
+void	sort(t_stacks *s, char *strategy);
 
 /* input */
 t_node	*parse_args(int argc, char **argv);
