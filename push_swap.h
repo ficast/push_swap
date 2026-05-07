@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fiolivei <fiolivei@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: ipinto-m <ipinto-m@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/04 00:00:00 by fiolivei          #+#    #+#             */
-/*   Updated: 2026/05/04 00:00:00 by fiolivei         ###   ########.fr       */
+/*   Updated: 2026/05/07 22:57:45 by ipinto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <limits.h>
 # include "libft/libft.h"
 
 typedef struct s_node
@@ -30,7 +31,7 @@ typedef struct s_stacks
 }				t_stacks;
 
 /* stack utils */
-int		peek(t_node *stack);
+// int		peek(t_node *stack);
 int		stack_size(t_node *stack);
 int		is_sorted(t_node *stack);
 void	free_stack(t_node **stack);
@@ -49,7 +50,7 @@ void	op_rrb(t_stacks *s);
 void	op_rrr(t_stacks *s);
 
 /* sort */
-double		compute_disorder(t_node *stack);
+double	compute_disorder(t_node *stack);
 void	sort(t_stacks *s, char *strategy);
 
 /* input */
