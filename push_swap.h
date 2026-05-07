@@ -57,7 +57,4 @@ void	sort(t_stacks *s, char *strategy);
 t_node	*parse_args(int argc, char **argv);
 void	error_exit(t_stacks *s);
 
-/* Libft*/
-int	ft_strncmp(const char *s1, const char *s2, size_t n);
-
 #endif
