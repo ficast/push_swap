@@ -34,6 +34,7 @@ int		peek(t_node *stack);
 int		stack_size(t_node *stack);
 int		is_sorted(t_node *stack);
 void	free_stack(t_node **stack);
+t_node	*get_smallest(t_node *stack);
 
 /* operations */
 void	op_sa(t_stacks *s);

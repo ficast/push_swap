@@ -12,10 +12,16 @@
 
 #include "../push_swap.h"
 
+int	is_valid_int(char c);
+int	has_duplicates(int *arr);
+int	is_valid_strategy(char *s);
+int	is_bench(char *s);
+
 t_node	*parse_args(int argc, char **argv)
 {
-	//check if flags are valid
-	(void)argc;
-	(void)argv;
-	return (NULL);
+	char	flags[5];
+
+	flags = {"--simple", "--medium", "--complex",
+		"--adptative", "--bench"};
+	if ()
 }

@@ -31,6 +31,22 @@ int	stack_size(t_node *stack)
 	return (size);
 }
 
+t_node	*get_smallest(t_node *stack)
+{
+	t_node *smallest;
+	t_node *comp;
+
+	smallest = stack;
+	comp = stack->next;
+	while (comp != NULL)
+	{
+		if (comp < smallest)
+			smallest = comp;
+		comp = comp->next;
+	}
+	return (smallest);
+}
+
 int	is_sorted(t_node *stack)
 {
 	(void)stack;
