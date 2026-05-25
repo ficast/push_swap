@@ -6,7 +6,7 @@
 /*   By: fiolivei <fiolivei@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/04 00:00:00 by fiolivei          #+#    #+#             */
-/*   Updated: 2026/05/04 00:00:00 by fiolivei         ###   ########.fr       */
+/*   Updated: 2026/05/08 14:17:21 by fiolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ void	op_pa(t_stacks *s)
 		return ;
 	value = pop_front(&s->b);
 	push_front(&s->a, value);
+	s->benchmarks.pa++;
 	write(1, "pa\n", 3);
 }
 
@@ -57,5 +58,6 @@ void	op_pb(t_stacks *s)
 		return ;
 	value = pop_front(&s->a);
 	push_front(&s->b, value);
+	s->benchmarks.pb++;
 	write(1, "pb\n", 3);
 }

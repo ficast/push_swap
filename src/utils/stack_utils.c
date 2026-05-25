@@ -3,19 +3,47 @@
 /*                                                        :::      ::::::::   */
 /*   stack_utils.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ipinto-m <ipinto-m@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: fiolivei <fiolivei@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/04 00:00:00 by fiolivei          #+#    #+#             */
-/*   Updated: 2026/05/07 22:50:38 by ipinto-m         ###   ########.fr       */
+/*   Updated: 2026/05/25 16:18:11 by fiolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../../push_swap.h"
 
-int	peek(t_node *stack)
+t_node	*find_max(t_node *stack)
 {
-	(void)stack;
-	return (0);
+	t_node	*max;
+
+	if (!stack)
+		return (NULL);
+	max = stack;
+	stack = stack->next;
+	while (stack)
+	{
+		if (stack->value > max->value)
+			max = stack;
+		stack = stack->next;
+	}
+	return (max);
+}
+
+t_node	*find_min(t_node *stack)
+{
+	t_node	*min;
+
+	if (!stack)
+		return (NULL);
+	min = stack;
+	stack = stack->next;
+	while (stack)
+	{
+		if (stack->value < min->value)
+			min = stack;
+		stack = stack->next;
+	}
+	return (min);
 }
 
 int	stack_size(t_node *stack)

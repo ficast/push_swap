@@ -8,9 +8,17 @@ LIBFT_DIR   = ./libft
 LIBFT       = $(LIBFT_DIR)/libft.a
 
 SRCS    = src/main.c \
-          src/stack_utils.c \
+          src/utils/stack_utils.c \
+          src/utils/int_utils.c \
+          src/utils/bench_utils.c \
           src/parse_args.c \
           src/sort/sort.c \
+          src/sort/sort_a.c \
+          src/sort/sort_b.c \
+          src/sort/sort_c.c \
+          src/utils/sort_c_utils_1.c \
+          src/utils/sort_c_utils_2.c \
+          src/utils/sort_c_utils_3.c \
           src/ops/swap.c \
           src/ops/push.c \
           src/ops/rotate.c \

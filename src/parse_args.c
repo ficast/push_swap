@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse_args.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ipinto-m <ipinto-m@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: fiolivei <fiolivei@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/04 00:00:00 by fiolivei          #+#    #+#             */
-/*   Updated: 2026/05/07 23:08:52 by ipinto-m         ###   ########.fr       */
+/*   Updated: 2026/05/08 10:02:22 by fiolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,7 +103,6 @@ t_node	*parse_args(int argc, char **argv)
 		nb = ft_atol(argv[i]);
 		if (nb < INT_MIN || nb > INT_MAX || has_duplicate(stack_a, (int)nb))
 			return (free_stack(&stack_a), NULL);
-
 		if (!append_node(&stack_a, (int)nb))
 			return (free_stack(&stack_a), NULL);
 		i++;
