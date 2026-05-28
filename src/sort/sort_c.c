@@ -6,7 +6,7 @@
 /*   By: fiolivei <fiolivei@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/08 08:12:16 by fiolivei          #+#    #+#             */
-/*   Updated: 2026/05/25 15:37:43 by fiolivei         ###   ########.fr       */
+/*   Updated: 2026/05/25 16:22:17 by fiolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,4 +86,6 @@ void	sort_c(t_stacks *s)
 		execute_move(&cost, s);
 	}
 	sort_three(s);
+	push_b_to_a(s);
+	rotate_min_to_top(s);
 }

@@ -6,7 +6,7 @@
 /*   By: fiolivei <fiolivei@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/04 00:00:00 by fiolivei          #+#    #+#             */
-/*   Updated: 2026/05/25 16:20:38 by fiolivei         ###   ########.fr       */
+/*   Updated: 2026/05/25 19:09:19 by fiolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ typedef struct s_bench
 	t_strategy		mode;
 	t_strategy		executed;
 	double			disorder;
+	int				enabled;
 
 }					t_bench;
 
@@ -88,7 +89,7 @@ int					max_int(int a, int b);
 int					min_int(int a, int b);
 
 /* bench utils */
-void				bench_init(t_bench *b, t_strategy mode);
+void				bench_init(t_bench *b, t_strategy mode, int enabled);
 t_strategy			get_strategy_from_flag(const char *flag);
 const char			*get_strategy_name(t_strategy s);
 const char			*get_strategy_complexity(t_strategy s);
@@ -116,10 +117,10 @@ void				sort_c(t_stacks *s);
 /* sortc utils*/
 void				execute_move(t_cost *c, t_stacks *s);
 void				sort_three(t_stacks *s);
-void			push_b_to_a(t_stacks *s);
-int				find_position_of_min(t_node *a);
-void			rotate_min_to_top(t_stacks *s);
-int				target_position_in_b(int x, t_node *b);
+void				push_b_to_a(t_stacks *s);
+int					find_position_of_min(t_node *a);
+void				rotate_min_to_top(t_stacks *s);
+int					target_position_in_b(int x, t_node *b);
 
 /* input */
 t_node				*parse_args(int argc, char **argv);

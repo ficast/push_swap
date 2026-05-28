@@ -6,7 +6,7 @@
 /*   By: fiolivei <fiolivei@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/04 00:00:00 by fiolivei          #+#    #+#             */
-/*   Updated: 2026/05/08 15:15:32 by fiolivei         ###   ########.fr       */
+/*   Updated: 2026/05/25 19:11:07 by fiolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int	main(int argc, char **argv)
 	strategy = "--adaptive";
 	bench_mode = 0;
 	i = get_list_start(argc, argv, &strategy, &bench_mode);
-	bench_init(&s.benchmarks, get_strategy_from_flag(strategy));
+	bench_init(&s.benchmarks, get_strategy_from_flag(strategy), bench_mode);
 	s.a = parse_args(argc - i, argv + i);
 	if (!s.a)
 		error_exit(&s);

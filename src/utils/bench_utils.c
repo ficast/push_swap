@@ -6,17 +6,18 @@
 /*   By: fiolivei <fiolivei@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/08 11:57:23 by fiolivei          #+#    #+#             */
-/*   Updated: 2026/05/25 16:20:39 by fiolivei         ###   ########.fr       */
+/*   Updated: 2026/05/25 19:10:30 by fiolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-void	bench_init(t_bench *b, t_strategy mode)
+void	bench_init(t_bench *b, t_strategy mode, int enabled)
 {
 	ft_bzero(b, sizeof(t_bench));
 	b->mode = mode;
 	b->executed = mode;
+	b->enabled = enabled;
 }
 
 t_strategy	get_strategy_from_flag(const char *flag)
