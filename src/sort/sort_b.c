@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   input.c                                            :+:      :+:    :+:   */
+/*   sort_b.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fiolivei <fiolivei@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/04 00:00:00 by fiolivei          #+#    #+#             */
-/*   Updated: 2026/05/04 00:00:00 by fiolivei         ###   ########.fr       */
+/*   Created: 2026/05/08 08:12:16 by fiolivei          #+#    #+#             */
+/*   Updated: 2026/05/08 10:06:33 by fiolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../../push_swap.h"
 
-t_node	*parse_args(int argc, char **argv)
+void	sort_b(t_stacks *s)
 {
-	//check if flags are valid
-	(void)argc;
-	(void)argv;
-	return (NULL);
+	(void)s;
 }

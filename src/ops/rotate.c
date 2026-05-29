@@ -31,12 +31,14 @@ static void	rotate(t_node **stack)
 void	op_ra(t_stacks *s)
 {
 	rotate(&s->a);
+	s->benchmarks.ra++;
 	write(1, "ra\n", 3);
 }
 
 void	op_rb(t_stacks *s)
 {
 	rotate(&s->b);
+	s->benchmarks.rb++;
 	write(1, "rb\n", 3);
 }
 
@@ -44,5 +46,6 @@ void	op_rr(t_stacks *s)
 {
 	rotate(&s->a);
 	rotate(&s->b);
+	s->benchmarks.rr++;
 	write(1, "rr\n", 3);
 }

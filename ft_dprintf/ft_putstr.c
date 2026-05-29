@@ -1,40 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   disorder_metric.c                                  :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fiolivei <fiolivei@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/04 00:00:00 by fiolivei          #+#    #+#             */
-/*   Updated: 2026/05/04 00:00:00 by fiolivei         ###   ########.fr       */
+/*   Created: 2026/04/21 00:00:00 by fiolivei          #+#    #+#             */
+/*   Updated: 2026/05/25 19:31:26 by fiolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "ft_dprintf.h"
 
-double	compute_disorder(t_node *stack)
+int	ft_putstr(char *s, int fmt)
 {
-	int		mistakes;
-	int		total_pairs;
-	t_node	*a;
-	t_node	*b;
+	int	count;
 
-	mistakes = 0;
-	total_pairs = 0;
-	a = stack;
-	while (a)
+	count = 0;
+	if (s == NULL)
+		s = "(null)";
+	while (*s)
 	{
-		b = a->next;
-		while (b)
-		{
-			total_pairs++;
-			if (a->value > b->value)
-				mistakes++;
-			b = b->next;
-		}
-		a = a->next;
+		ft_putchar(*s, fmt);
+		count += 1;
+		s++;
 	}
-	if (total_pairs == 0)
-		return (0.0);
-	return ((double)mistakes / total_pairs);
+	return (count);
 }
