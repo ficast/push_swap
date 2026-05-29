@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_dprintf.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fiolivei <fiolivei@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: ipinto-m <ipinto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/04 18:09:24 by fiolivei          #+#    #+#             */
-/*   Updated: 2026/05/25 19:31:32 by fiolivei         ###   ########.fr       */
+/*   Updated: 2026/05/29 19:11:38 by ipinto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#ifndef FT_DPRINTF_H
+# define FT_DPRINTF_H
 
 # include <stdarg.h>
 # include <unistd.h>
@@ -31,14 +31,14 @@ typedef struct s_dispatch
 }			t_dispatch;
 
 // handlers para cada caractere
-int				handle_d_i(va_list *args, int fmt);
-int				handle_s(va_list *args, int fmt);
-int				handle_c(va_list *args, int fmt);
-int				handle_u(va_list *args, int fmt);
-int				handle_x_upper(va_list *args, int fmt);
-int				handle_x_lower(va_list *args, int fmt);
-int				handle_p(va_list *args, int fmt);
-int				handle_percent(va_list *args, int fmt);
+int			handle_d_i(va_list *args, int fmt);
+int			handle_s(va_list *args, int fmt);
+int			handle_c(va_list *args, int fmt);
+int			handle_u(va_list *args, int fmt);
+int			handle_x_upper(va_list *args, int fmt);
+int			handle_x_lower(va_list *args, int fmt);
+int			handle_p(va_list *args, int fmt);
+int			handle_percent(va_list *args, int fmt);
 
 // Funções auxiliares
 int			ft_putchar(char c, int fmt);

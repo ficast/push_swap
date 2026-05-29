@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_dprintf.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fiolivei <fiolivei@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: ipinto-m <ipinto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/26 22:21:56 by fiolivei          #+#    #+#             */
-/*   Updated: 2026/05/25 19:34:54 by fiolivei         ###   ########.fr       */
+/*   Updated: 2026/05/29 19:11:32 by ipinto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 static int	put_formated_char(const char *format, va_list *args, int fmt)
 {
 	static t_dispatch	dispatch[] = {{'d', handle_d_i}, {'i', handle_d_i},
-			{'s', handle_s}, {'c', handle_c}, {'u', handle_u}, {'x',
-			handle_x_lower}, {'X', handle_x_upper}, {'p', handle_p}, {'%',
-			handle_percent}, {0, NULL}};
+	{'s', handle_s}, {'c', handle_c}, {'u', handle_u}, {'x',
+		handle_x_lower}, {'X', handle_x_upper}, {'p', handle_p}, {'%',
+		handle_percent}, {0, NULL}};
 	int					i;
 	int					count;
 

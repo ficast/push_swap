@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_a.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fiolivei <fiolivei@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: ipinto-m <ipinto-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/08 08:12:16 by fiolivei          #+#    #+#             */
-/*   Updated: 2026/05/08 10:06:31 by fiolivei         ###   ########.fr       */
+/*   Updated: 2026/05/29 19:13:04 by ipinto-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,14 @@
 
 void	sort_a(t_stacks *s)
 {
-	(void)s;
+	while (stack_size(s->a) > 3)
+	{
+		rotate_min_to_top(s);
+		op_pb(s);
+	}
+	sort_three(s);
+	while (s->b)
+	{
+		op_pa(s);
+	}
 }
