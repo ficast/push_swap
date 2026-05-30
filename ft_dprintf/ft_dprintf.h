@@ -16,7 +16,7 @@
 # include <stdarg.h>
 # include <unistd.h>
 
-int			ft_dprintf(const char *format, int fmt, ...);
+int			ft_dprintf(int fd, const char *format, ...);
 
 // Abordagem dispatch table
 

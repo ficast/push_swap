@@ -6,7 +6,7 @@
 /*   By: fiolivei <fiolivei@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/04 00:00:00 by fiolivei          #+#    #+#             */
-/*   Updated: 2026/05/08 10:02:22 by fiolivei         ###   ########.fr       */
+/*   Updated: 2026/05/30 20:36:17 by fiolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,7 @@ static int	append_node(t_node **stack, int value)
 		return (0);
 	new_node->value = value;
 	new_node->next = NULL;
+	new_node->index = 0;
 	if (!*stack)
 	{
 		*stack = new_node;
