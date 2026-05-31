@@ -6,11 +6,14 @@ RM      = rm -f
 
 LIBFT_DIR   = ./libft
 LIBFT       = $(LIBFT_DIR)/libft.a
+FT_DPRINTF_DIR = ./ft_dprintf
+FT_DPRINTF     = $(FT_DPRINTF_DIR)/libftdprintf.a
 
 SRCS    = src/main.c \
           src/utils/stack_utils.c \
           src/utils/int_utils.c \
           src/utils/bench_utils.c \
+          src/utils/bench_print_helpers.c \
           src/parse_args.c \
           src/sort/sort.c \
           src/sort/sort_a.c \
@@ -33,7 +36,8 @@ $(LIBFT):
 	@$(MAKE) -C $(LIBFT_DIR)
 
 $(NAME): $(LIBFT) $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -L$(LIBFT_DIR) -lft -o $(NAME)
+	@$(MAKE) -C $(FT_DPRINTF_DIR)
+	$(CC) $(CFLAGS) $(OBJS) -L$(LIBFT_DIR) -lft -L$(FT_DPRINTF_DIR) -lftdprintf -o $(NAME)
 
 clean:
 	@$(MAKE) clean -C $(LIBFT_DIR)

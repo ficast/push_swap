@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ipinto-m <ipinto-m@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fiolivei <fiolivei@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/04 00:00:00 by fiolivei          #+#    #+#             */
-/*   Updated: 2026/05/30 16:31:22 by ipinto-m         ###   ########.fr       */
+/*   Updated: 2026/05/30 21:04:22 by fiolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,6 +122,14 @@ void				push_b_to_a(t_stacks *s);
 int					find_position_of_min(t_node *a);
 void				rotate_min_to_top(t_stacks *s);
 int					target_position_in_b(int x, t_node *b);
+
+/* bench print helpers */
+void				print_disorder(t_bench *b);
+void				print_strategy(t_bench *b);
+void				print_total(t_bench *b);
+void				print_ops_line1(t_bench *b);
+void				print_ops_line2(t_bench *b);
+void				print_bench(t_bench *b);
 
 /* input */
 t_node				*parse_args(int argc, char **argv);

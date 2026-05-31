@@ -35,25 +35,26 @@ static int	put_formated_char(const char *format, va_list *args, int fmt)
 	return (count);
 }
 
-int	ft_dprintf(const char *format, int fmt, ...)
+int	ft_dprintf(int fd, const char *format, ...)
 {
 	int		count;
 	va_list	args;
 
 	count = 0;
-	va_start(args, fmt);
+	va_start(args, format);
 	while (*format)
 	{
 		if (*format == '%')
 		{
 			format++;
-			count += put_formated_char(format, &args, fmt);
+			count += put_formated_char(format, &args, fd);
 		}
 		else
 		{
-			count += ft_putchar(*format, fmt);
+			count += ft_putchar(*format, fd);
 		}
 		format++;
 	}
+	va_end(args);
 	return (count);
 }
